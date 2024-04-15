@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+towhee = "*"
+fastapi = {extras = ["all"], version = "*"}
+yolov5 = "*"
+pymilvus = "*"
+timm = "*"
+wheel = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
