@@ -41,13 +41,25 @@ class MilvusManager:
             output_fields = output_fields
         )
     
-    def get_data_by_ids(self, collection_name: str, ids: list):
+    def get_data_by_ids(
+            self, 
+            collection_name: str, 
+            ids: list[int], 
+            output_fields: list[str]
+        ):
         return self.client.get(
             collection_name=collection_name,
-            ids=ids
+            ids=ids,
+            output_fields=output_fields
         )
     
-    def query_data(self, collection_name:str, query_filter:str, output_fields:list, limit:int):
+    def query_data(
+            self, 
+            collection_name: str, 
+            query_filter: str, 
+            output_fields: list[str], 
+            limit: int
+        ):
         return self.client.query(
             collection_name=collection_name,
             filter=query_filter,
