@@ -39,4 +39,4 @@ $env:PYTHONPATH="src"; python prepare/load_data.py
 pipenv run uvicorn main:app --reload
 # Or, if setting PYTHONPATH
 $env:PYTHONPATH="src"; uvicorn main:app --reload
-```
+```  
